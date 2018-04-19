@@ -50,7 +50,9 @@ public:
 	bool set(const char* key, const char* value);
 	bool set(const char* key, size_t key_len,
 		const char* value, size_t value_len);
-
+	
+	bool setexnx(const char* key, const char* value,int timeout);
+	bool setexnx(const char* key, size_t key_len,const char* value, size_t value_len,int timeout);
 	/**
 	 * 将值 value 关联到 key ，并将 key 的生存时间设为 timeout (以秒为单位)，
 	 * 如果 key 已经存在， SETEX 命令将覆写旧值
